@@ -34,10 +34,10 @@ public class Practice {
 
         //Q3-3.
         String HGD = "881120-1068234";
-        String yymmdd = HGD.substring(0,6);
-        String afternum = HGD.substring(7); //중간부터 끝까지 추출하고 싶을 땐 시작부분만 표기해도 됨
-        System.out.println(yymmdd);
-        System.out.println(afternum);
+        String yyMMdd = HGD.substring(0,6);
+        String afterNum = HGD.substring(7); //중간부터 끝까지 추출하고 싶을 땐 시작부분만 표기해도 됨
+        System.out.println(yyMMdd);
+        System.out.println(afterNum);
 
         //Q3-4.
         System.out.println(HGD.charAt(7)); //7번째 인덱스에 위치한 문자 출력
@@ -65,8 +65,8 @@ public class Practice {
         System.out.println(grade);
 
         //Q3-9.
-        HashSet<Integer> numbset = new HashSet<>(Arrays.asList(1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5)); //집합 자료형은 중복을 허용하지 않고, 순서가 없음
-        System.out.println(numbset);
+        HashSet<Integer> numbSet = new HashSet<>(Arrays.asList(1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5)); //집합 자료형은 중복을 허용하지 않고, 순서가 없음
+        System.out.println(numbSet);
 
         //Q3-10. again,,
         priceCoffee(CoffeeType.AMERICANO); //아메리카노의 가격
