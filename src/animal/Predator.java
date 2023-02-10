@@ -8,4 +8,8 @@ package animal;
 
 interface Predator {
     String getFood(); //인터페이스는 메서드 이름과 입출력만 정의하고 구현은 구현체에서 함 >> 반드시 구현해야 함(강제성)
+
+    default void printFood() { //default 메서드를 사용하면 인터페이스에서 구현 가능 + 오버라이딩 가능
+        System.out.printf("my food is %s/n", getFood());
+    }
 }
