@@ -26,10 +26,7 @@ class Calculator {
 
     //Q5-3.
     boolean isOdd(int t) {
-        if (t % 2 == 1) {
-            return true;
-        }
-        return false;
+        return t % 2 == 1;
     }
 
     //Q5-4.
@@ -43,8 +40,6 @@ class Calculator {
 //    void avg(int[] data) {
 //        add % data.length;
 //    }
-
-
 
     public static void main(String[] args) {
         Calculator cal1 = new Calculator(); //계산기1 객체 생성
