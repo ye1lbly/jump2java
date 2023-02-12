@@ -1,3 +1,5 @@
+package practice;
+
 public class Practice2 {
     public static void main(String[] args) {
         //Q4-2. again,,

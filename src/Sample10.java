@@ -1,5 +1,3 @@
-package calculator;
-
 public class Sample10 {
     int sum(int a, int b) { //입력값과 리턴값이 있는 일반적인 매소드, 매개변수 a, b
         return a + b;
