@@ -30,16 +30,13 @@ class Calculator {
     }
 
     //Q5-4.
-    int[] data = {1, 3, 5, 7, 9};
-    int sum = 0;
-    void add(int[] data) {
-        for (int dataArray: data) {
+    int avg(int[] data) {
+        int sum = 0;
+        for (int dataArray : data) {
             sum += dataArray;
         }
+        return sum / data.length;
     }
-//    void avg(int[] data) {
-//        add % data.length;
-//    }
 
     public static void main(String[] args) {
         Calculator cal1 = new Calculator(); //계산기1 객체 생성
@@ -63,7 +60,8 @@ class Calculator {
         System.out.println(cal2.isOdd(5));
         System.out.println(cal2.isOdd(2));
 
-//        int average = cal3.avg(data);
-//        System.out.println(average);
+        int[] data = {1, 3, 5, 7, 9};
+        int average = cal3.avg(data);
+        System.out.println(average);
     }
 }
