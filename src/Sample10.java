@@ -17,15 +17,11 @@ public class Sample10 {
         System.out.println("hello");
     }
 
-    public void sayNickName(String nick) {
-        try {
-            if ("fool".equals(nick)) {
-                throw new FoolExcept(); //닉네임이 바보와 일치할 경우 단독으로 sayNickName 메소드를 즉시 빠져나감
-            }
-            System.out.println("내 별명은 " + nick + "입니다.");
-        } catch (FoolExcept e) {
-            System.out.println("FoolExcept 발생");
+    public void sayNickName(String nick) throws FoolExcept {
+        if ("fool".equals(nick)) {
+            throw new FoolExcept(); //닉네임이 바보와 일치할 경우 단독으로 sayNickName 메소드를 즉시 빠져나감
         }
+        System.out.println("내 별명은 " + nick + "입니다.");
     }
 
     public static void main(String[] args) {
@@ -38,6 +34,11 @@ public class Sample10 {
 
         sample10.nSum(3, 4);
         sample10.say2();
-        sample10.sayNickName("fool"); //fool 대신 다른 문자열 넣으면 문장 출력
+        try {
+            sample10.sayNickName("fool"); //fool 대신 다른 문자열 넣으면 문장 출력
+            sample10.sayNickName("ye1l"); //수행되지 않음
+        } catch (FoolExcept e) {
+            System.err.println("FoolExcept 발생");
+        }
     }
 }
