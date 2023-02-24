@@ -1,3 +1,5 @@
+class FoolExcept extends Exception {}
+
 public class Sample10 {
     int sum(int a, int b) { //입력값과 리턴값이 있는 일반적인 매소드, 매개변수 a, b
         return a + b;
@@ -15,11 +17,15 @@ public class Sample10 {
         System.out.println("hello");
     }
 
-    void sayJack(String nick) {
-        if ("fool".equals(nick)) {
-            return; //닉네임이 바보와 일치할 경우 단독으로 사용된 리턴문에 의해 sayJack 메소드를 즉시 빠져나감
+    public void sayNickName(String nick) {
+        try {
+            if ("fool".equals(nick)) {
+                throw new FoolExcept(); //닉네임이 바보와 일치할 경우 단독으로 sayNickName 메소드를 즉시 빠져나감
+            }
+            System.out.println("내 별명은 " + nick + "입니다.");
+        } catch (FoolExcept e) {
+            System.out.println("FoolExcept 발생");
         }
-        System.out.println("내 별명은 " + nick + "입니다.");
     }
 
     public static void main(String[] args) {
@@ -32,6 +38,6 @@ public class Sample10 {
 
         sample10.nSum(3, 4);
         sample10.say2();
-        sample10.sayJack("fool"); //fool 대신 다른 문자열 넣으면 문장 출력
+        sample10.sayNickName("fool"); //fool 대신 다른 문자열 넣으면 문장 출력
     }
 }
