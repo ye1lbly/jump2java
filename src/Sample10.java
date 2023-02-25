@@ -1,9 +1,10 @@
+import java.util.function.BiFunction;
+
 class FoolExcept extends Exception {}
 
 public class Sample10 {
-    int sum(int a, int b) { //입력값과 리턴값이 있는 일반적인 매소드, 매개변수 a, b
-        return a + b;
-    }
+    //입력값과 리턴값이 있는 일반적인 매소드, 매개변수 a, b
+    //int sum(int a, int b) { return a + b; }
 
     String say() { //입력값은 없지만 리턴값은 있는 메소드
         return "hi";
@@ -25,14 +26,17 @@ public class Sample10 {
     }
 
     public static void main(String[] args) {
-        Sample10 sample10 = new Sample10();
-        int c = sample10.sum(3, 4); //인수 3, 4
-        String A = sample10.say();
+        //BiFunction 의 제네릭스는 순서대로 입력항목 2개, 출력항목 1개를 의미
+        //입출력 항목이 아래와 같이 모두 동일한 경우 BinaryOperator<Integer> 를 사용하여 더욱 간단하게 표현
+        BiFunction<Integer, Integer, Integer> sum = Integer::sum; //우변은 람다식 (a, b) -> a + b 와 동일한 표현임
+        int result = sum.apply(3, 4); //BiFunction 인터페이스의 apply 메소드 호출하며 람다함수 실행
+        System.out.println(result);
 
-        System.out.println(c);
+        Sample10 sample10 = new Sample10();
+        String A = sample10.say();
         System.out.println(A);
 
-        sample10.nSum(3, 4);
+        sample10.nSum(3, 4); //인수 3, 4
         sample10.say2();
         try {
             sample10.sayNickName("fool"); //fool 대신 다른 문자열 넣으면 문장 출력
