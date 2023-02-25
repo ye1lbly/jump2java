@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
-public class Sample12 extends Thread {
+//Thread 클래스를 상속하면 다른 클래스 상속 불가능 -> Runnable 인터페이스 구현하는 방식으로 수정
+public class Sample12 implements Runnable {
     int seq;
     public Sample12(int seq) {
         this.seq = seq;
@@ -17,7 +18,7 @@ public class Sample12 extends Thread {
     public static void main(String[] args) {
         ArrayList<Thread> threads = new ArrayList<>(); //Thread 생성시 threads 에 저장
         for (int i = 0; i < 10; i++) { //총 10개의 Thread 생성 및 동시 실행
-            Thread t = new Sample12(i);
+            Thread t = new Thread(new Sample12(i));
             t.start(); //start() 실행시 Thread 클래스의 run 메소드 수행
             threads.add(t);
         }
