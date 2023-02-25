@@ -42,5 +42,23 @@ public class Practice3 {
                 .toArray(); //int[] 배열로 반환
 
         System.out.println(Arrays.toString(result));
+
+        //Q7-4.
+        int[] numbers = {1, 2, 3, 4, 5};
+        int[] answer = Arrays.stream(numbers)
+                .boxed()
+                .filter((n) -> n % 2 == 1)
+
+                .mapToInt(Integer::intValue)
+                .toArray();
+
+        //Q7-5.
+        int[] nums = {1, -2, 3, -5, 8, -3};
+        int[] ans = Arrays.stream(nums)
+                .boxed()
+                .filter((m) -> m >= 0)
+                .mapToInt(Integer::intValue)
+                .toArray();
+        System.out.println(Arrays.toString(ans));
     }
 }
