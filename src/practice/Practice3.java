@@ -46,18 +46,15 @@ public class Practice3 {
         //Q7-4.
         int[] numbers = {1, 2, 3, 4, 5};
         int[] answer = Arrays.stream(numbers)
-                .boxed()
                 .filter((n) -> n % 2 == 1)
-
-                .mapToInt(Integer::intValue)
+                .map((n) -> n * 2) //필터링한 홀수에 2를 곱해줌
                 .toArray();
+        System.out.println(Arrays.toString(answer));
 
         //Q7-5.
         int[] nums = {1, -2, 3, -5, 8, -3};
         int[] ans = Arrays.stream(nums)
-                .boxed()
                 .filter((m) -> m >= 0)
-                .mapToInt(Integer::intValue)
                 .toArray();
         System.out.println(Arrays.toString(ans));
     }
