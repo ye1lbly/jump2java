@@ -1,6 +1,14 @@
 package practice;
 
 public class Practice4 {
+    static int getTotalPage(int n, int m) { // n : 게시물 총 갯수, m : 한 페이지에 보일 게시물 수
+        if (n % m == 0) {
+            return n / m;
+        } else {
+            return n / m + 1;
+        }
+    }
+
     public static void main(String[] args) {
         int result = 0;
         for (int n = 1; n < 1000; n++) {
@@ -9,5 +17,10 @@ public class Practice4 {
             }
         }
         System.out.println(result);
+
+        //총 페이지 수 출력
+        System.out.println(getTotalPage(5, 10));
+        System.out.println(getTotalPage(15, 10));
+        System.out.println(getTotalPage(30, 10));
     }
 }
