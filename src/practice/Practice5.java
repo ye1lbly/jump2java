@@ -13,8 +13,7 @@ public class Practice5 {
         String[] data = s.split(":"); //split 메서드를 사용해 문자열 s 를 :을 기준으로 나눈 후 문자열 배열로 변환
         System.out.println(Arrays.toString(data));
 
-        ArrayList<String> dataList = new ArrayList<>(Arrays.asList(data));
-        String result = String.join("#", dataList);
+        String result = String.join("#", data);
         System.out.println(result);
 
         //Q9-2.
@@ -24,10 +23,7 @@ public class Practice5 {
 
         //Q9-3.
         int[] A = {20, 55, 67, 82, 45, 33, 90, 87, 100, 25};
-        int a = 0;
-        for (int i : A) {
-            if (i >= 50) { a += i; }
-        }
+        int a = Arrays.stream(A).filter((n) -> n >= 50).sum();
         System.out.println(a);
 
         //Q9-4.
