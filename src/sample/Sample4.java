@@ -1,4 +1,4 @@
-//Map 은 key 와 value 를 한 쌍으로 갖는 자료형임
+package sample;//Map 은 key 와 value 를 한 쌍으로 갖는 자료형임
 
 import java.util.HashMap;
 

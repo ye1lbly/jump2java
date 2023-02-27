@@ -1,3 +1,5 @@
+package sample;
+
 public class Sample11 {
     public void shouldBeRun() {
         System.out.println("ok thanks.");

@@ -1,3 +1,5 @@
+package sample;
+
 import java.util.ArrayList;
 
 //Thread 클래스를 상속하면 다른 클래스 상속 불가능 -> Runnable 인터페이스 구현하는 방식으로 수정

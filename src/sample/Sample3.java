@@ -1,4 +1,4 @@
-//List 는 자바의 자료형으로 배열과 비슷함
+package sample;//List 는 자바의 자료형으로 배열과 비슷함
 
 import java.util.ArrayList; //ArrayList 를 사용하기 위해 ArrayList 를 먼저 import 해줌
 import java.util.Arrays;

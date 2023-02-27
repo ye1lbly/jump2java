@@ -1,4 +1,4 @@
-//switch case 문은 if 문과 비슷하지만 좀 더 정형화된 조건 판단문임
+package sample;//switch case 문은 if 문과 비슷하지만 좀 더 정형화된 조건 판단문임
 //switch case 문은 if else 구조로 변경 가능하지만 반대는 아닌 경우도 있음(충분조건 느낌)
 
 public class Sample7 {

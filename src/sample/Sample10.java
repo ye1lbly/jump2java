@@ -1,3 +1,5 @@
+package sample;
+
 import java.util.function.BiFunction;
 
 class FoolExcept extends Exception {}

@@ -1,4 +1,4 @@
-//for 문은 while 문과 마찬가지로 반복 수행할 때 쓰임
+package sample;//for 문은 while 문과 마찬가지로 반복 수행할 때 쓰임
 
 public class Sample9 {
     public static void main(String[] args) {
