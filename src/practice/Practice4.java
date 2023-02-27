@@ -9,6 +9,11 @@ public class Practice4 {
         }
     }
 
+    static int getDigitCount(int i) {
+        String s = "" + i; //숫자 i 문자열로 변환
+        return s.length();
+    }
+
     public static void main(String[] args) {
         int result = 0;
         for (int n = 1; n < 1000; n++) {
@@ -22,5 +27,11 @@ public class Practice4 {
         System.out.println(getTotalPage(5, 10));
         System.out.println(getTotalPage(15, 10));
         System.out.println(getTotalPage(30, 10));
+
+        //문자열의 자릿수 출력
+        System.out.println(getDigitCount(3));
+        System.out.println(getDigitCount(23));
+        System.out.println(getDigitCount(563));
+        System.out.println(getDigitCount(7893));
     }
 }
