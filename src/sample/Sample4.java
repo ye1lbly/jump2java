@@ -1,9 +1,11 @@
-package sample;//Map 은 key 와 value 를 한 쌍으로 갖는 자료형임
+package sample;
 
 import java.util.HashMap;
 
+/* Map 은 key 와 value 를 한 쌍으로 갖는 자료형임 */
+
 public class Sample4 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         HashMap<String, String> map = new HashMap<>(); //key, value 모두 string 타입으로 다른 자료형 사용 불가
         map.put("people", "사람"); //key, value 를 put method 를 이용하여 추가
         map.put("baseball", "야구");
