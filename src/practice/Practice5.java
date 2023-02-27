@@ -5,6 +5,16 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Practice5 {
+    static int fibonnaci(int init) {
+        if (init == 0) {
+            return 0;
+        } else if (init == 1) {
+            return 1;
+        } else {
+            return fibonnaci(init - 2) + fibonnaci(init - 1);
+        }
+    }
+
     public static void main(String[] args) {
         //Q9-1.
         String s = "a:b:c:d";
@@ -27,6 +37,7 @@ public class Practice5 {
         System.out.println(a);
 
         //Q9-4.
+        for (int i = 0; i < 10; i++) { System.out.println(fibonnaci(i)); }
 
         //Q9-5.
 
