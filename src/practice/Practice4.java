@@ -14,6 +14,16 @@ public class Practice4 {
         return s.length();
     }
 
+    static int getCharCount(String st) {
+        int answer = 0;
+        for (int a = 0; a < st.length(); a++) {
+            if (st.charAt(a) != ' ') {
+                answer++;
+            }
+        }
+        return answer;
+    }
+
     public static void main(String[] args) {
         int result = 0;
         for (int n = 1; n < 1000; n++) {
@@ -33,5 +43,9 @@ public class Practice4 {
         System.out.println(getDigitCount(23));
         System.out.println(getDigitCount(563));
         System.out.println(getDigitCount(7893));
+
+        //공백 제외한 글자수 출력
+        System.out.println(getCharCount("점프 투 자바"));
+        System.out.println(getCharCount("점프 투 자바 종합문제 풀이"));
     }
 }
