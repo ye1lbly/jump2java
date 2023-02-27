@@ -3,6 +3,7 @@ package practice;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Practice5 {
     static int fibonnaci(int init) {
@@ -40,9 +41,11 @@ public class Practice5 {
         for (int i = 0; i < 10; i++) { System.out.print(fibonnaci(i) + " "); }
 
         //Q9-5.
+        Scanner sc = new Scanner(System.in);
+        System.out.print("출력을 원하는 구구단 숫자를 입력하시오 : "); //print 를 사용하면 줄바꿈 없이 값 출력 (println 을 사용하면 줄바꿈된 출력값 확인 가능)
+        int num = sc.nextInt(); //숫자 입력 받음
         for (int p = 1; p < 10; p++) {
-            int q = 2;
-            System.out.print(p * q + " "); //print 를 사용하면 줄바꿈 없이 값 출력 (println 을 사용하면 줄바꿈된 출력값 확인 가능)
+            System.out.printf("%d ", num * p);
         }
 
         //Q9-6.
