@@ -25,6 +25,24 @@ public class Practice5 {
         System.out.println("짝수입니다.");
     }
 
+    static String dashInsert(String d) {
+        int[] numbers = Arrays.stream(d.split("")) //숫자 -> 정수 배열 변환
+                .mapToInt(Integer::parseInt)
+                .toArray();
+        ArrayList<String> resultList = new ArrayList<>();
+        for (int i = 0; i < numbers.length; i++) {
+            resultList.add("" + numbers[i]);
+            if (i < numbers.length - 1) { //다음 수가 있는지 확인
+                if (numbers[i] % 2 == 1 && numbers[i+1] % 2 == 1) {
+                    resultList.add("-");
+                } else if (numbers[i] % 2 == 0 && numbers[i+1] % 2 == 0) {
+                    resultList.add("*");
+                }
+            }
+        }
+        return String.join("", resultList);
+    }
+
     public static void main(String[] args) throws IOException {
         /* Q9-1 */
         String s = "a:b:c:d";
@@ -124,17 +142,9 @@ public class Practice5 {
         }
 
         /* Q9-11 */
-        Scanner dashInsert = new Scanner(System.in);
-        System.out.print("숫자를 입력하시오 : ");
-        int input = dashInsert.nextInt();
-
-//        for (int p = 0; p < input.size(); p++) {
-//            if (input(p) % 2 == 0 && input(p+1) % 2 == 0) {
-//                input(p+1).add(*);
-//            } else if (input(p) % 2 == 1 && input(p+1) % 2 == 1) {
-//                input(p+1).add(-);
-//            }
-//        }
+        String d = "4546793";
+        String answer = dashInsert(d);
+        System.out.println(answer);
 
         /* Q9-12 */
 
