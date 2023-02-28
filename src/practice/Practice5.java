@@ -4,6 +4,8 @@ import java.awt.*;
 import java.io.*;
 import java.util.*;
 
+class OddException extends Exception {}
+
 public class Practice5 {
     static int fibonnaci(int init) {
         if (init == 0) {
@@ -13,6 +15,14 @@ public class Practice5 {
         } else {
             return fibonnaci(init - 2) + fibonnaci(init - 1);
         }
+    }
+
+    static void execute(int n) throws OddException {
+        System.out.printf("입력 숫자 : %d\n", n);
+        if (n % 2 == 1) {
+            throw new OddException();
+        }
+        System.out.println("짝수입니다.");
     }
 
     public static void main(String[] args) throws IOException {
@@ -102,5 +112,36 @@ public class Practice5 {
         PrintWriter ptw = new PrintWriter("result2.txt");
         ptw.write(String.format("%.2f", avg)); //실수 문자열로 변환 후 저장
         ptw.close();
+
+        /* Q9-10 */
+        Random r = new Random();
+        for (int m = 0; m < 10; m++) {
+            try {
+                execute(r.nextInt(10)); //범위내 정수 중 임의의 정수(난수) 리턴
+            } catch (OddException e) {
+                e.printStackTrace();
+            }
+        }
+
+        /* Q9-11 */
+        Scanner dashInsert = new Scanner(System.in);
+        System.out.print("숫자를 입력하시오 : ");
+        int input = dashInsert.nextInt();
+
+//        for (int p = 0; p < input.size(); p++) {
+//            if (input(p) % 2 == 0 && input(p+1) % 2 == 0) {
+//                input(p+1).add(*);
+//            } else if (input(p) % 2 == 1 && input(p+1) % 2 == 1) {
+//                input(p+1).add(-);
+//            }
+//        }
+
+        /* Q9-12 */
+
+        /* Q9-13 */
+
+        /* Q9-14 */
+
+        /* Q9-15 */
     }
 }
