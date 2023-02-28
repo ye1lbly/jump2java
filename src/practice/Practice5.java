@@ -1,9 +1,7 @@
 package practice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.awt.*;
+import java.util.*;
 
 public class Practice5 {
     static int fibonnaci(int init) {
@@ -41,17 +39,30 @@ public class Practice5 {
         for (int i = 0; i < 10; i++) { System.out.print(fibonnaci(i) + " "); }
 
         //Q9-5.
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); //Scanner 클래스를 사용하기 위해 인스턴스 생성
         System.out.print("출력을 원하는 구구단 숫자를 입력하시오 : "); //print 를 사용하면 줄바꿈 없이 값 출력 (println 을 사용하면 줄바꿈된 출력값 확인 가능)
-        int num = sc.nextInt(); //숫자 입력 받음
-        for (int p = 1; p < 10; p++) {
-            System.out.printf("%d ", num * p);
-        }
+        int num = sc.nextInt(); //콘솔에서 숫자 입력 받음
+        for (int p = 1; p < 10; p++) { System.out.printf("%d ", num * p); }
 
         //Q9-6.
+        int[] user = {65, 45, 2, 3, 45, 8};
+        int u = Arrays.stream(user).sum();
+        System.out.println(u);
 
         //Q9-7.
+        String[] abc = {"AAA", "BBB", "CCC", "DDD", "EEE"};
+        ArrayList<String> alphabet = new ArrayList<>(Arrays.asList(abc));
+        alphabet.sort(Comparator.reverseOrder());
+        System.out.println(alphabet);
 
         //Q9-8.
+        double[] sample = {70, 60, 55, 75, 95, 90, 80, 80, 87, 100};
+        double sum = Arrays.stream(sample).sum();
+        System.out.println(sum);
+
+        double avg = sum / sample.length;
+        System.out.println(avg); //소수점까지 표현해주기 위해 int 대신 double 로 수정
+
+
     }
 }
