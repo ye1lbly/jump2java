@@ -43,6 +43,20 @@ public class Practice5 {
         return String.join("", resultList);
     }
 
+    static String strCompress(String c) {
+        ArrayList<String> al = new ArrayList<>();
+        int count = 0;
+        for (int l = 0; l < c.length(); l++) {
+//            al.add("" + c[l+1]);
+//            if (l < c.length() -1) {
+//                for (c[l] == c[l+1]) {
+//                    al.add(count++);
+//                }
+//            }
+        }
+        return String.join("", al);
+    }
+
     public static void main(String[] args) throws IOException {
         /* Q9-1 */
         String s = "a:b:c:d";
@@ -147,6 +161,9 @@ public class Practice5 {
         System.out.println(answer);
 
         /* Q9-12 */
+        String c = "aaabbcccccca";
+        String comp = strCompress(c);
+        System.out.println(comp);
 
         /* Q9-13 */
 
