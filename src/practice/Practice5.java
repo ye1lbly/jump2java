@@ -44,17 +44,16 @@ public class Practice5 {
     }
 
     static String strCompress(String c) {
-        ArrayList<String> al = new ArrayList<>();
+        String tempStore = ""; //c 문자열 하나씩 대입해보며 비교할 수 있는 문자 임시저장 변수
         int count = 0;
-        for (int l = 0; l < c.length(); l++) {
-//            al.add("" + c[l+1]);
-//            if (l < c.length() -1) {
-//                for (c[l] == c[l+1]) {
-//                    al.add(count++);
-//                }
-//            }
+        String comp = "";
+        for (String store : c.split("")) { //입력받은 문자열 c에서 문자 하나씩 store 에 대입
+            if (!store.equals(tempStore)) {
+                tempStore = store;
+                //후에 다시,,
+            }
         }
-        return String.join("", al);
+        return comp;
     }
 
     public static void main(String[] args) throws IOException {
@@ -161,8 +160,7 @@ public class Practice5 {
         System.out.println(answer);
 
         /* Q9-12 */
-        String c = "aaabbcccccca";
-        String comp = strCompress(c);
+        String comp = strCompress("aaabbcccccca");
         System.out.println(comp);
 
         /* Q9-13 */
